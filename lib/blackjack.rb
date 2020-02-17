@@ -10,12 +10,13 @@ def display_card_total(card_total)
   puts "Your cards add up to #{card_total}"
 end
 
-def prompt_user
-  puts "Type 'h' to hit or 's' to stay"
+def get_user_input
+  return gets.chomp
 end
 
-def get_user_input
-  return gets
+def prompt_user
+  puts "Type 'h' to hit or 's' to stay"
+  get_user_input
 end
 
 def end_game(card_total)
@@ -29,8 +30,9 @@ def initial_round
   total
 end
 
-def hit?
-  # code hit? here
+def hit?(card_total)
+  input = prompt_user
+
 end
 
 def invalid_command
